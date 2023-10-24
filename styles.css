@@ -155,6 +155,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
