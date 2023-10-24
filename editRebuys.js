@@ -15,16 +15,13 @@ players.forEach(player => {
 
   const saveNewRebuyButton = document.createElement('button');
 
-  saveNewRebuyButton.addEventListener('click', () => {
-    setTimeout(() => {
-        saveNewRebuyButton.style.backgroundColor = "#007BFF";
-    }, 10); // 10 seconds delay
-  });
-
   saveNewRebuyButton.innerHTML = 'Save';
   saveNewRebuyButton.addEventListener('click', () => {
     const rebuyInput = document.querySelector(`#rebuy-input-${player.name}`);
     saveNewRebuyValue(player, playerDiv, rebuyInput);
+    setTimeout(() => {
+      saveNewRebuyButton.style.backgroundColor = "#007BFF";
+  }, 10); // 10 seconds delay
   });
 
   playerDiv.innerHTML = `
