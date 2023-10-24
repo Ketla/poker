@@ -47,10 +47,10 @@ h1 {
 }
 
 .player-row button {
-  margin-left: 10px;
-  background-color: plum;
+  margin-left: 10px;  
+  background-color: purple;
   color: yellow;
-  border: 1px solid #c4c4c4;
+  border: 2px solid yellow;
   border-radius: 3px;
   padding: 5px 10px;
   cursor: pointer;
