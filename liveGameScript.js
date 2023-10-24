@@ -14,6 +14,13 @@ players.forEach(player => {
   playerDiv.className = 'player-row';
 
   const rebuyButton = document.createElement('button');
+
+  rebuyButton.addEventListener('click', () => {
+    setTimeout(() => {
+        rebuyButton.style.backgroundColor = "#007BFF";
+    }, 10); // 10 seconds delay
+  });
+
   rebuyButton.innerHTML = 'Rebuy';
   rebuyButton.addEventListener('click', () => {
     handleRebuy(player.name);
