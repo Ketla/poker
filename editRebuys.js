@@ -19,9 +19,6 @@ players.forEach(player => {
   saveNewRebuyButton.addEventListener('click', () => {
     const rebuyInput = document.querySelector(`#rebuy-input-${player.name}`);
     saveNewRebuyValue(player, playerDiv, rebuyInput);
-    setTimeout(() => {
-      saveNewRebuyButton.style.backgroundColor = "#007BFF";
-  }, 10); // 10 seconds delay
   });
 
   playerDiv.innerHTML = `
