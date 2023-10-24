@@ -147,7 +147,7 @@ input {
   display: none;
 }
 
-button {
+button, button:active, button:focus {
   background-color: #007BFF;
   color: white;
   padding: 10px 20px;
@@ -155,7 +155,8 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Using rgba for transparency */
+  outline: none; /* Caution: Only use if you're providing an alternative focus indication */
 }
 
 button {
