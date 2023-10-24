@@ -48,9 +48,9 @@ h1 {
 
 .player-row button {
   margin-left: 10px;  
-  background-color: purple;
-  color: yellow;
-  border: 2px solid yellow;
+  background-color: rgb(180, 48, 48);
+  color: white;
+  border: 2px solid white;
   border-radius: 3px;
   padding: 5px 10px;
   cursor: pointer;
