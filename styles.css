@@ -1,0 +1,174 @@
+.main {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.player-header,
+.player-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr; /* Adjusting the columns */
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.player-header {
+  background-color: #eee; /* Giving a different background to the header for differentiation */
+  font-weight: bold;
+}
+
+#buy-in-amount-display.set {
+  background-color: lightcoral;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+#set-buy-in {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#set-buy-in:hover {
+  background-color: #555;
+}
+
+.player-row button {
+  margin-left: 10px;
+  background-color: plum;
+  color: yellow;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.player-row button:hover {
+  background-color: #d4d4d4;
+}
+
+#total-buyin-display {
+  color: green;
+  font-size: 1.2em;
+  margin-top: 20px;
+  border: 2px solid green;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.bold-number {
+  font-weight: 900;
+}
+
+#start-game {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  display: block;
+}
+
+.bold-rebuy-count {
+  font-weight: bold;
+  color: green;
+}
+
+input, select, textarea {
+  font-size: 16px;
+}
+
+
+input {
+  font-size: 16px;
+  width: 80px; /* or your desired width */
+  padding: 2px 5px;
+  box-sizing: border-box; /* ensures that padding is included in the total width */
+}
+
+/* CSS styles for the button */
+#estimate-payouts-button {
+  margin-top: 10px; /* Add some top margin to create space */
+  margin-bottom: 20px;
+}
+
+/* CSS styles for the list container */
+#final-placement-list-container {
+  list-style: none; /* Remove list bullets */
+  padding: 0; /* Remove padding */
+}
+
+#calculate-transfers-button {
+  display: none;
+}
+
+/* Styling for the table */
+#transfersTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+#transfersTable th, #transfersTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#transfersTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#transfersTable th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#estimate-payouts-button {
+  display: none;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+select {
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.rank-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}

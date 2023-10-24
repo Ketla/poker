@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Up The Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="main">
+    <h1>Set Up The Game</h1>
+    
+    <div>
+        <p>Enter and Set the Buy-In Amount:</p>
+        <p><input type="number" id="buy-in-amount" placeholder="200">
+        <button id="set-buy-in">Set Buy-In</button></p>
+    </div>
+
+    <h4 id="buy-in-amount-display">Buy-In Amount Per Player:</h4>
+
+    <p id="payment-structure">Payment Structure:</p>
+    <p><input type="number" id="1-payment-structure-data" value="60"> % of winnings - 1st Place</p>
+    <p><input type="number" id="2-payment-structure-data" value="30"> % of winnings -  2nd Place</p>
+    <p><input type="number" id="3-payment-structure-data" value="10"> % of winnings -  3rd Place</p>
+    <p><input type="number" id="4-payment-structure-data" value="0"> % of winnings -  4th Place</p>
+    
+    
+    
+    <br>
+    <div>
+        <p>Add Players:
+        <input type="text" id="player-name" placeholder="Name">
+        <button id="add-player">Add Player</button></p>
+    </div>
+
+    <div id="players-list">
+        <div class="player-header">
+            <span>Name</span>
+            <span>Buy-In Amount</span>
+            <span></span>
+        </div>
+        <div id="players-data"></div>
+    </div>
+
+    <div id="total-buyin-display">Total Buy-In Amount: 0</div>
+
+    <button id="start-game">START GAME</button>
+    <br>
+    <br>
+
+  
+  
+      <br>
+      <br>  
+      <br>
+  
+      <button id="clear-local-data">Clear Local Data (WARNING: DO NOT DO IN THE MIDDLE OF GAME!) REFRESH PAGE AFTER! </button>
+
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

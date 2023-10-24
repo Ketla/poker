@@ -1,0 +1,75 @@
+/* Reset some default styles for better consistency across browsers */
+body, h1, div, p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.main {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#total-buyin-display {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#player-list {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto; /* Centers the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Styling for the table */
+#transfersTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+#transfersTable th, #transfersTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#transfersTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#transfersTable th {
+  background-color: #4CAF50;
+  color: white;
+}

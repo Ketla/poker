@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Payouts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Tournament Payouts</h1>
+        <div id="total-buyin-display">Total Pot Amount: 0</div>
+        <br>
+        <div id="player-list">
+            <!-- Player list will be generated dynamically here -->
+        </div>
+        <br>
+        <button id="saveRanks">Save Rankings</button>
+        <button id="randomizeRanks">Randomize Ranks (for testing)</button>
+
+        <br>  
+
+        <button id="estimate-payouts-button">ESTIMATE WINNINGS</button>
+
+        <div id="final-placement-list-container">
+            <!-- Payout results will be displayed here -->
+        </div>
+        <br>
+        <br>
+
+        <!-- Add a container to display money transfers -->
+        <button id="calculate-transfers-button">Calculate Money Transfers</button>
+        <div id="debt-transfer-container"></div>
+
+
+    </div>
+    <script src="payout.js"></script>
+</body>
+</html>
