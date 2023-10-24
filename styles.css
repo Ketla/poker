@@ -173,3 +173,12 @@ select {
   align-items: center;
   margin-bottom: 10px;
 }
+
+footer {
+  background-color: #f8f8f8; /* Light gray background */
+  border: 1px solid #e0e0e0; /* Border for the box effect */
+  padding: 20px 40px; 
+  width: 80%; /* You can adjust the width as per your design needs */
+  margin: 20px auto; /* Centering the footer box */
+  text-align: left;
+}
