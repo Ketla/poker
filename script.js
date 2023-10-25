@@ -22,12 +22,14 @@ setBuyInButton.addEventListener('click', () => {
         buyInAmount = inputValue;
         localStorage.setItem('buyInAmount', buyInAmount);
         console.log(`Buy-In Amount stored in localStorage: ${buyInAmount}`);
+
+        setBuyInButton.disabled = true;
+        buyInAmountInput.disabled = true;
+    
+        updateBuyInDisplay();
+    } else {
+      alert("Please enter a valid amount.");
     }
-
-    setBuyInButton.disabled = true;
-    buyInAmountInput.disabled = true;
-
-    updateBuyInDisplay();
 
 });
 
