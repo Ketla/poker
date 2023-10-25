@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', updateBuyInDisplay);
+
 document.addEventListener('DOMContentLoaded', () => {
   loadPlayerData(); // Call the function to load player data and Buy-In Amount
   console.log(buyInAmount);
@@ -8,7 +10,7 @@ const buyInAmountInput = document.getElementById('buy-in-amount');
 const setBuyInButton = document.getElementById('set-buy-in');
 const buyInAmountDisplay = document.getElementById('buy-in-amount-display');
 
-let buyInAmount = '200'; // Default value
+let buyInAmount = 0; // Default value
 
 setBuyInButton.addEventListener('click', () => {
     // Get the current value from the input
@@ -22,15 +24,26 @@ setBuyInButton.addEventListener('click', () => {
         console.log(`Buy-In Amount stored in localStorage: ${buyInAmount}`);
     }
 
-    buyInAmountDisplay.innerHTML = `Buy-In Amount Per Player: ${buyInAmount}`;
-    localStorage.setItem('buyInAmount', buyInAmount);
-
     setBuyInButton.disabled = true;
     buyInAmountInput.disabled = true;
 
-    buyInAmountDisplay.classList.add('set');
+    updateBuyInDisplay();
 
 });
+
+function updateBuyInDisplay() {
+  // Retrieve the stored value from localStorage
+  let storedValue = localStorage.getItem('buyInAmount');
+
+  // If there's a stored value, update the display and style
+  if (storedValue) {
+      buyInAmountDisplay.innerHTML = `Buy-In Amount Per Player: ${storedValue}`;
+      buyInAmountDisplay.classList.add('set');
+
+      setBuyInButton.disabled = true;
+      buyInAmountInput.disabled = true;
+  }
+}
 
 let players = [];
 
@@ -41,6 +54,10 @@ const playersListDiv = document.getElementById('players-list');
 addPlayerButton.addEventListener('click', () => {
   const playerName = addPlayerInput.value.trim();
 
+  if (buyInAmount === 0) {
+    alert("Buy-In Amount must be set before adding players.");
+    return; // Exit the function
+}
   // Check if player name is at least 5 characters long
   if (playerName.length < 5) {
       alert("Player name must be at least 5 characters long.");
@@ -145,6 +162,10 @@ document.getElementById('start-game').addEventListener('click', function() {
 
 const clearLocalDataButton = document.getElementById('clear-local-data');
 clearLocalDataButton.addEventListener('click', () => {
+  
+  let userResponse = confirm("Are you sure you want to do this?");
+
+  if (userResponse) {
   // Clear the local storage data
   localStorage.removeItem('players');
   localStorage.removeItem('buyInAmount');
@@ -154,6 +175,8 @@ clearLocalDataButton.addEventListener('click', () => {
   playersListDiv.innerHTML = '';
   console.log(players);
   console.log(buyInAmount);
+  location.reload();
+  }
 });
 
 // ...
