@@ -182,3 +182,8 @@ footer {
   margin: 20px auto; /* Centering the footer box */
   text-align: left;
 }
+
+#randomizeRanks {
+  background-color: lightcoral;
+  color: black;
+}
