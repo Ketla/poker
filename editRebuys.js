@@ -23,7 +23,7 @@ players.forEach(player => {
 
   playerDiv.innerHTML = `
     <span>${player.name} <strong>[ ${player.rebuyCount} ]</strong></span>
-    <input value="${player.rebuyCount}" id="rebuy-input-${player.name}">
+    <input type="number" value="${player.rebuyCount}" id="rebuy-input-${player.name}">
   `;
 
   playerDiv.appendChild(saveNewRebuyButton);
@@ -34,10 +34,14 @@ players.forEach(player => {
 function saveNewRebuyValue(player, playerDiv, rebuyInput) {
   // Get the new rebuyCount value from the input field
   
+  const inputValue = parseInt(rebuyInput.value, 10);
+
+  if (!isNaN(inputValue)) {
+
   const oldRebuyCount = player.rebuyCount;
   const newRebuyCount = parseInt(rebuyInput.value, 10);
 
-  // Calculate the amount to increase the buyin by (200 times the difference in rebuy counts)
+  // Calculate the amount to increase the buyin by oringalbuyin
   
   const buyinIncrease = player.originalBuyin * (newRebuyCount - oldRebuyCount);
 
@@ -53,6 +57,9 @@ function saveNewRebuyValue(player, playerDiv, rebuyInput) {
   localStorage.setItem('players', JSON.stringify(players));
 
   rebuyLogger(oldRebuyCount, newRebuyCount, player);
+  } else {
+    alert("Please enter a valid amount.");
+  }
 
 }
 
