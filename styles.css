@@ -76,6 +76,8 @@ h1 {
 }
 
 #start-game {
+  width: 100%;          /* Set width to 100% of the parent container */
+  box-sizing: border-box; /* Ensure padding is included in the width */
   padding: 15px 30px;
   font-size: 20px;
   background-color: green;
@@ -86,6 +88,7 @@ h1 {
   border-radius: 5px;
   display: block;
 }
+
 
 .bold-rebuy-count {
   font-weight: bold;
